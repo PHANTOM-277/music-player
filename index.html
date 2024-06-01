@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="c1">
+        <div class="options" id="opt1">Chorded</div>
+        <div class="options" id="opt2">Rainy Night</div>
+        <div class="options" id="opt3">Heavenly Bliss</div>
+        <div class="options" id="opt4">Memories</div>
+        <div class="options" id="opt5">Snowy Evening</div>
+        <div class="options" id="opt6">Warm Blanket</div>
+    </div>
+    <div class="c2">
+        <img id="logo" src="edited2.png">
+        <div id="slider-section">
+            <p id="start">0:00</p>
+            <input type="range" id="slider">
+            <p id="end">2:00</p>
+        </div>
+        <div id="button-container">
+            
+            
+            <button id="play" class="buttons" ><img class="png" id="playpng" src="assets/play.png"></button>
+            
+        </div>
+    </div>
+    <div class="c3">
+        <p style="font-size: 35px; color: blanchedalmond; ">Volume</p>
+        <input type="range" id="volume">
+        <p id="volume-indicator">100%</p>
+        <p id="playing">Now Playing:</p>
+        <p id="nameofsong">Chorded</p>
+    </div>
+</body>
+<script src="./node_modules/howler/dist/howler.min.js"></script>
+<script src="script.js"></script>
+</html>
