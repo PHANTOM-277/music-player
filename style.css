@@ -87,6 +87,10 @@ body{
     cursor: pointer;
 }
 
+#slider::-webkit-slider-thumb:hover{
+    transform: scale(1.5);
+}
+
 #button-container{
     display: flex;
     justify-content: space-around;
@@ -121,6 +125,11 @@ body{
     background: #85c4bc;
     cursor: pointer;
 }
+
+#volume::-webkit-slider-thumb:hover{
+    transform: scale(1.5);
+}
+
 
 #volume-indicator{
     color: #152837;
