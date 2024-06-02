@@ -91,6 +91,11 @@ body{
     transform: scale(1.5);
 }
 
+#slider::-webkit-slider-thumb:active{
+    transform: scale(1.75);
+    border:1.5px solid hotpink;
+}
+
 #button-container{
     display: flex;
     justify-content: space-around;
@@ -130,6 +135,10 @@ body{
     transform: scale(1.5);
 }
 
+#volume::-webkit-slider-thumb:active{
+    transform: scale(1.75);
+    border: 1.5px solid hotpink;
+}
 
 #volume-indicator{
     color: #152837;
