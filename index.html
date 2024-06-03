@@ -14,13 +14,15 @@
         <div class="options" id="opt4">Memories</div>
         <div class="options" id="opt5">Snowy Evening</div>
         <div class="options" id="opt6">Warm Blanket</div>
+        <button id="repeat"><img id="repeatimg" src="assets/repeat.png"></button>
+        <button id="autoplaybtn">Autoplay</button>
     </div>
     <div class="c2">
         <img id="logo" src="edited2.png">
         <div id="slider-section">
             <p id="start">0:00</p>
             <input type="range" id="slider">
-            <p id="end">2:00</p>
+            <p id="end">2:51</p>
         </div>
         <div id="button-container">
             
@@ -30,13 +32,21 @@
         </div>
     </div>
     <div class="c3">
-        <p style="font-size: 35px; color: blanchedalmond; ">Volume</p>
-        <input type="range" id="volume">
-        <p id="volume-indicator">100%</p>
-        <p id="playing">Now Playing:</p>
-        <p id="nameofsong">Chorded</p>
+        <div id="volume-box">
+            <p style="font-size: 35px; color: blanchedalmond; margin-bottom: 2%;margin-top:5% ">Volume</p>
+            <input type="range" id="volume">
+            <p id="volume-indicator">100%</p>
+        </div>
+        <div id="playing-box">
+            <p id="playing">Now Playing:</p>
+            <p id="nameofsong">Chorded</p>
+        </div>
+        <div id="otherdata-box">
+            <p id="repeatshow" class="otherdata">No repeat</p>
+            <p id="autoplayshow" class="otherdata">No autoplay</p>
+        </div>    
     </div>
 </body>
 <script src="./node_modules/howler/dist/howler.min.js"></script>
-<script src="script.js"></script>
+<script src="script3.js"></script>
 </html>
