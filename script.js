@@ -101,6 +101,24 @@ playbar.addEventListener('input', function(){
         time_indicator.innerHTML = `${m}:${ss}`;
     }
 });
+
+function load(name){ // to mudularise the onload of new objects
+    initplaybar(0,sound.duration(),1);
+    console.log("duration "+sound.duration());
+    playbar.value = 0;
+    s = sound.duration() - Math.floor(sound.duration()/60)*60;
+    console.log("duration2 :"+sound.duration());
+    if(s<10){
+        s = `0${s}`;
+    }
+    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
+    time_indicator.innerHTML = "0:00";
+    isplaying = false;
+    time = 0;
+    playpng.src = "assets/play.png";
+    nameofsong.innerHTML = name;
+}
+
 //volume event listener
 volumeslider.addEventListener('input', function(){
     sound.volume(volumeslider.value/100);
@@ -111,22 +129,7 @@ option1.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['chorded.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Chorded";
-        }
+        onload:()=> load("Chorded")
     });
 })
 
@@ -135,22 +138,7 @@ option2.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['rainy-night.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Rainy Night"
-        }
+        onload: ()=>load("Rainy Night")
     });
 })
 
@@ -159,22 +147,7 @@ option3.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['Heavenly bliss.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Heavenly Bliss";
-        }
+        onload:()=> load("Heavenly Bliss")
     });
 })
 
@@ -183,22 +156,7 @@ option4.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['memories.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Memories";
-        }
+        onload:()=> load("Memories")
     });
 })
 
@@ -207,22 +165,7 @@ option5.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['snowy-evening.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Snowy Evening";
-        }
+        onload: ()=>load("Snowy Evening")
     });
 })
 
@@ -231,21 +174,6 @@ option6.addEventListener('click',function(){
     sound.stop();
     sound = new Howl({
         src:['warm-blanket.mp3'],
-        onload: function(){
-                    initplaybar(0,sound.duration(),1);
-                    console.log("duration "+sound.duration());
-                    playbar.value = 0;
-                    s = sound.duration() - Math.floor(sound.duration()/60)*60;
-                    console.log("duration2 :"+sound.duration());
-                    if(s<10){
-                        s = `0${s}`;
-                    }
-                    time_duration.innerHTML = `${Math.floor(sound.duration()/60)}:${Math.ceil(s)}`;
-                    time_indicator.innerHTML = "0:00";
-                    isplaying = false;
-                    time = 0;
-                    playpng.src = "assets/play.png";
-                    nameofsong.innerHTML = "Warm Blanket";
-        }
+        onload:()=> load("Warm Blanket")
     });
 })
