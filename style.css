@@ -15,6 +15,8 @@ body{
     background-image: linear-gradient(#152837,#f9d7b1);
     border-radius: 30px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .options{
@@ -30,15 +32,53 @@ body{
 }
 
 .options:hover{
-    background-color:rgba(240,248,255,0.5) ;
+    background-color:rgba(240,248,255,0.6) ;
 }
 
 .options:active{
     transform: scale(1.1);
 }
 
+#repeat{
+    background-color: transparent;
+    height: 20%;
+    width : 40%;
+    align-self: center;
+    border : 0;
+    margin-top: 5%;
+    border-radius: 10%;
+}
 
+#repeatimg{
+    height: 100%;
+    width:100%;
+}
 
+#repeat:hover{
+    transform: scale(1.1);
+}
+
+#repeat:active{
+    transform: skew(20deg);
+}
+
+#autoplaybtn{
+    color:#152837;
+    width:33%;
+    align-self: center;
+    margin-top:2%;
+    font-size: 22px;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+#autoplaybtn:hover{
+    background-color:rgba(240,248,255,0.75) ;
+}
+
+#autoplaybtn:active{
+    transform: scale(1.05);
+}
 
 .c2{
     border:0;
@@ -108,8 +148,18 @@ body{
     background-image: linear-gradient(#152837,#f9d7b1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
+}
+
+#volume-box{
+    height:33%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid #f9d7b1;
 }
 
 #volume{
@@ -141,22 +191,51 @@ body{
 }
 
 #volume-indicator{
-    color: #152837;
+    color: #f9d7b1;
     font-size: 35px;
     font-weight: 900;
+    margin: 2%;
+}
+
+#playing-box{
+    height:33%;
+    width:100%;
+    border-bottom: 5px solid #152837;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #playing{
     font-size: 35px;
+    color:#f9d7b1;
+    font-weight: 700;
+    margin-bottom:2%;
+}
+
+#nameofsong{
+    margin-top: 2%;
+    font-size: 35px;
     color:#152837;
     font-weight: 700;
 }
 
-#nameofsong{
-    transform: translateY(-65px);
+#otherdata-box{
+    width:100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.otherdata{
     font-size: 35px;
     color:#152837;
     font-weight: 700;
+    margin: 2.5%
 }
 
 .buttons{
