@@ -32,17 +32,25 @@ function initplaybar(min , max , steps){
 }
 
 function update_playbar(){
-    playbar.value = time;
-    time++;
-    console.log(sound.seek());
-    //something to make a string of mm:ss format of time variable
-    m = Math.floor(time/60);
-    s = time - m*60;
-    ss = s;
-    if(s<10){
-        ss = `0${s}`;
+    if(time > sound.duration()){
+        clearInterval(updateinterval);
+        sound.stop();
+        playpng.src =  "assets/play.png";
+        isplaying = false;
     }
-    time_indicator.innerHTML = `${m}:${ss}`;
+    else{
+        playbar.value = time;
+        time++;
+        console.log(sound.seek());
+        //something to make a string of mm:ss format of time variable
+        m = Math.floor(time/60);
+        s = time - m*60;
+        ss = s;
+        if(s<10){
+            ss = `0${s}`;
+        }
+        time_indicator.innerHTML = `${m}:${ss}`;
+    }
 }
 
 function playmusic(){
@@ -54,10 +62,12 @@ function playmusic(){
         clearInterval(updateinterval);
     }
     else{
-        sound.play();
-        isplaying = true;
-        playpng.src = "assets/pause.png";
-        updateinterval = setInterval(update_playbar,1000);
+        if(time<sound.duration()){
+            sound.play();
+            isplaying = true;
+            playpng.src = "assets/pause.png";
+            updateinterval = setInterval(update_playbar,1000);
+        }
     }
     
 }
